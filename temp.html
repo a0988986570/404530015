@@ -1,0 +1,66 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+  <script src="wordcloud2.js"></script>
+  <title>文字雲</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+ </head>
+ 
+  <script>
+ $(function(){
+  var words = [
+   ["證卷",45],
+   ["受處分人",33],
+   ["管理",26],
+   ["規定",25],
+   ["客戶",21],
+   ["公開",20],
+   ["交易",20],
+   ["收購",19],
+   ["處分",19],
+   ["業務",19],
+   ["公司",19],
+   ["中華民國",18],
+   ["辦理",17],
+   ["違反",16],
+   ["訴願",14],
+   ["股份有限公司",14],
+   ["信託",14],
+   ["控制",14],
+   ["康和",14],
+  ];
+ 
+  WordCloud($('#wordCloud')[0], {
+            list: words,
+            classes: 'wordCloud',
+            wait: 30,
+            gridSize: 10,
+            weightFactor: 1.8,
+            fontFamily: 'Hiragino Mincho Pro, serif',
+            color: 'random-dark',
+            backgroundColor: '#FFFFFF',
+            rotateRatio: 0
+        });
+                
+  
+  });
+ 
+ </script>
+ 
+ <body>
+  <div id="header">
+	<h1>文字雲</a></h1>
+	<p class="copy"></p>
+	<ul id="navi">
+	<li id="navi_01"><a href="wordcloud.php">網址</a></li>
+	<li id="navi_02"><a href="產生文字雲.html">文字雲</a></li>
+  <li id="navi_03"><a href="test.php">test</a></li>
+	</ul>
+  </div>
+  <div style="border:solid black;align:center;width:800px;margin:0 auto">
+   <div id="wordCloud" style="width:798px;height:500px;border:thin solid white;margin:0 auto">
+   </div>
+  </div> 
+ </body>
+</html>
